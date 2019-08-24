@@ -1,0 +1,11 @@
+docker run -it \
+      --memory 1gb \
+      -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+      -e DISPLAY=$DISPLAY \
+      -v /dev/shm:/dev/shm \
+      -v $HOME/.config/signal:/home/signal/.config/Signal \
+      -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket:ro \
+      --device /dev/snd \
+      --device /dev/dri/card0 \
+      --name signal \
+      micro:5000/signal:latest
