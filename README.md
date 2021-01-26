@@ -7,8 +7,8 @@ Signal provides only an amd64 architecture version, so this docker images is onl
 
 Versions in the latest image
 -----
-- [Signal](https://signal.org "Signal Homepage") Version: 1.26.2
-- [Debian Base Image](https://hub.docker.com/_/debian "Debian Docker Repo") Version: 9-slim
+- [Signal](https://signal.org "Signal Homepage") Version: 1.39.6
+- [Debian Base Image](https://hub.docker.com/_/debian "Debian Docker Repo") Version: 10.7-slim
 
 Start your container
 -----
@@ -22,6 +22,7 @@ docker run -it \
       -e DISPLAY=$DISPLAY \ # to display on your host X11
       --device /dev/snd \ # to have sound output
       --device /dev/dri/card0 \ # to use graphics card acceleration (if needed)
+      --device /dev/dri/renderD128 \ # to use graphics card acceleration (if needed)
       -v /dev/shm:/dev/shm \ 
       -v /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket \ # might need a change to your system
       -v $HOME/.config/signal:/home/signal/.config/Signal \ # make your settings persistent
