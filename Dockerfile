@@ -1,4 +1,4 @@
-FROM debian:10.7-slim
+FROM debian:stable-slim
 LABEL maintainer "avpnusr"
 
 RUN apt-get update && apt-get install -y \
@@ -20,4 +20,4 @@ COPY asound.conf /etc/asound.conf
 USER signal
 
 # Autorun Signal
-ENTRYPOINT [ "signal-desktop", "--no-sandbox" ]
+ENTRYPOINT [ "signal-desktop", "--no-sandbox", "--in-process-gpu" ]
