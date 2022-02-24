@@ -7,8 +7,8 @@ Signal provides only an amd64 architecture version, so this docker images is onl
 
 Versions in the latest image
 -----
-- [Signal](https://signal.org "Signal Homepage") Version: 1.39.6
-- [Debian Base Image](https://hub.docker.com/_/debian "Debian Docker Repo") Version: 10.7-slim
+- [Signal](https://signal.org "Signal Homepage") Version: 5.33.0
+- [Debian Base Image](https://hub.docker.com/_/debian "Debian Docker Repo") Version: stable-slim
 
 Start your container
 -----
